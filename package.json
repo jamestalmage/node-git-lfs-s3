@@ -1,0 +1,55 @@
+{
+  "name": "git-lfs-s3",
+  "version": "0.0.0",
+  "description": "My sensational module",
+  "license": "MIT",
+  "repository": "jamestalmage/git-lfs-s3",
+  "author": {
+    "name": "James Talmage",
+    "email": "james@talmage.io",
+    "url": "github.com/jamestalmage"
+  },
+  "bin": "cli.js",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "npm run cover && npm run lint",
+    "cover": "istanbul cover ./node_modules/.bin/_mocha",
+    "lint": "xo",
+    "debug": "mocha",
+    "watch": "mocha -w"
+  },
+  "files": [
+    "index.js",
+    "cli.js"
+  ],
+  "keywords": [
+    "cli-app",
+    "cli",
+    ""
+  ],
+  "dependencies": {
+    "aws-sdk": "^2.2.6",
+    "aws-sign": "^0.1.1",
+    "bluebird": "^2.10.2",
+    "express": "^4.13.3",
+    "json-schema": "^0.2.2",
+    "jsonschema": "^1.0.2",
+    "meow": "^3.3.0"
+  },
+  "devDependencies": {
+    "codeclimate-test-reporter": "^0.1.0",
+    "coveralls": "^2.11.2",
+    "istanbul": "^0.3.17",
+    "mocha": "^2.2.5",
+    "xo": "^0.9.0"
+  },
+  "xo": {
+    "envs": [
+      "node",
+      "mocha"
+    ],
+    "space": true
+  }
+}
