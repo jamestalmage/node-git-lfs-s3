@@ -1,9 +1,14 @@
 'use strict';
 var assert = require('assert');
+var sampleOptions = require('./lib/sample-options');
 var normalizeOptions = require('../lib/normalize-options.js');
 var find = normalizeOptions.findAndValidateOption;
 
 describe('normalize-options', function () {
+  it('sampleOptions', function () {
+    assert.deepEqual(normalizeOptions(sampleOptions()), sampleOptions());
+  });
+
   it('#findAndValidateOption', function () {
     assert.strictEqual(
       'ab',
